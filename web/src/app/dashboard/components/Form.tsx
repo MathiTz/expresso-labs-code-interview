@@ -29,45 +29,51 @@ export const Form: FC<FormComponentProps> = ({ formMode, onSubmit, agentValue })
     <form className="w-full max-w-lg mx-auto my-8"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex items-center mb-4">
-        <label htmlFor="name" className="w-1/4">Name</label>
-        <input
-          type="text"
-          id="name"
-          className="w-3/4 text-black"
-          {...registerByMode("name")}
-        />
+      <div className="flex flex-col flex-1 items-start mb-4">
+        <div className="w-full py-2 flex flex-col">
+          <label htmlFor="name" className="w-1/4 mr-4">Name</label>
+          <input
+            type="text"
+            id="name"
+            className="w-3/4 text-black"
+            {...registerByMode("name")}
+          />
+        </div>
         {errors.name && (
-          <span className="text-red-500">Name is required</span>
+          <span className="text-red-500 mt-2">Name is required</span>
         )}
       </div>
-      <div className="flex items-center mb-4">
-        <label htmlFor="email" className="w-1/4">Email</label>
-        <input
-          type="email"
-          id="email"
-          className="w-3/4 text-black"
-          {...registerByMode("email")}
-        />
+      <div className="flex flex-col flex-1 items-start mb-4">
+        <div className="w-full py-2 flex flex-col">
+          <label htmlFor="email" className="w-1/4 mr-4">Email</label>
+          <input
+            type="email"
+            id="email"
+            className="w-3/4 text-black"
+            {...registerByMode("email")}
+          />
+        </div>
         {errors.email && (
-          <span className="text-red-500">Email is required</span>
+          <span className="text-red-500 mt-2">Email is required</span>
         )}
       </div>
-      <div className="flex items-center mb-4">
-        <label htmlFor="status" className="w-1/4">Status</label>
-        <select
-          id="status"
-          className="w-3/4 text-black"
-          {...registerByMode("status")}
-        >
-          <option value={AgentStatus.Active}>Active</option>
-          <option value={AgentStatus.Inactive}>Inactive</option>
-        </select>
+      <div className="flex flex-col flex-1 items-start mb-4">
+        <div className="w-full py-2 flex flex-col">
+          <label htmlFor="status" className="w-1/4 mr-4">Status</label>
+          <select
+            id="status"
+            className="w-3/4 text-black"
+            {...registerByMode("status")}
+          >
+            <option value={AgentStatus.Active}>Active</option>
+            <option value={AgentStatus.Inactive}>Inactive</option>
+          </select>
+        </div>
         {errors.status && (
-          <span className="text-red-500">Status is required</span>
+          <span className="text-red-500 mt-2">Status is required</span>
         )}
       </div>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-center">
         <button
           data-testid="form-agent-submit"
           className="w-1/4 bg-blue-500 text-white py-2"

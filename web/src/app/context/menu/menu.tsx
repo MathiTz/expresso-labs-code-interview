@@ -11,11 +11,10 @@ const MenuContextProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const toggleCollapsed = async () => {
     setIsCollapsed(!isCollapsed);
-    console.log('AQUI')
     await sleep(300);
   }
 
-  const isMobileSize = window.innerWidth < 768
+  const isMobileSize = typeof window !== "undefined" && window.innerWidth < 768
 
   return (
     <MenuContext.Provider value={
