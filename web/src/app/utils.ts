@@ -2,6 +2,11 @@ export function sanatizeFields(fields: Record<string, unknown>) {
   return Object.fromEntries(Object.entries(fields).filter(([, v]) => v));
 }
 
+export function sanatizeRoute(route: string) {
+  // replace all ocorrunce of '/' with '-'
+  return route.replace(/\//g, '-');
+}
+
 export function formatDate(date: Date | string) {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',

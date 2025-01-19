@@ -42,11 +42,12 @@ export const List: FC<ListProps> = ({ data }) => {
       <input
         type="text"
         placeholder="Search agents..."
+        data-testid="search-agents-input"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="mb-4 p-2 border rounded w-full text-black"
       />
-      <ul className="space-y-4">
+      <ul className="space-y-4" data-testid="agents-list">
         {filteredAgents && filteredAgents.length > 0 ? (
           filteredAgents.slice(0, visibleCount).map(agent => (
             <li key={agent.id} className="border p-4 rounded-lg bg-white shadow-md transform transition-transform duration-300 hover:scale-105">

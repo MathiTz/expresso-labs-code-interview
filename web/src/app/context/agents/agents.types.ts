@@ -26,7 +26,7 @@ export type Agent = {
     bs: string;
   };
   status: AgentStatus;
-  lastSeen: Date;
+  lastSeen: string;
 };
 
 export type CreateAgentData = Agent;

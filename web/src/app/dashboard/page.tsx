@@ -20,15 +20,13 @@ const AgentsListPage = () => {
   })
 
   return (
-    <>
-      <main className="flex-1 p-6 bg-gray-500">
-        <section className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-semibold text-gray-800">Agents</h1>
-          <button onClick={handleCreateNewAgent} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Add New Agent</button>
-        </section>
-        <List data={agentsData} />
-      </main>
-    </>
+    <main className="flex-1 p-6 bg-gray-500">
+      <section className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-semibold text-gray-800">Agents</h1>
+        <button data-testid="button-create-agent" onClick={handleCreateNewAgent} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Add New Agent</button>
+      </section>
+      <List data={agentsData} />
+    </main>
   );
 };
 

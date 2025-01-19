@@ -14,7 +14,7 @@ const CreateAgentPage: FC = () => {
   } = useAgents()
 
   const onSubmit = (data: CreateAgentData) => {
-    const newAgent = { ...data, id: Math.random().toString(36).substr(2, 9), lastSeen: new Date() }
+    const newAgent = { ...data, id: Math.random().toString(36).substr(2, 9), lastSeen: new Date().toISOString() }
 
     create(newAgent)
     handleAddAgent(newAgent)

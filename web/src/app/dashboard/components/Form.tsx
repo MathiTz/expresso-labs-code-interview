@@ -2,7 +2,7 @@ import { Agent, AgentStatus } from "@/app/context/agents"
 import { FC } from "react"
 import { useForm } from "react-hook-form"
 
-type FormComponentProps = {
+export type FormComponentProps = {
   formMode: 'create' | 'edit'
   onSubmit: (data: Agent) => void
   agentValue?: Agent
@@ -69,6 +69,7 @@ export const Form: FC<FormComponentProps> = ({ formMode, onSubmit, agentValue })
       </div>
       <div className="flex items-center mb-4">
         <button
+          data-testid="form-agent-submit"
           className="w-1/4 bg-blue-500 text-white py-2"
           type="submit"
         >

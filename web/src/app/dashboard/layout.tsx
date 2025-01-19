@@ -5,6 +5,7 @@ import { AgentsContextProvider } from "../context/agents/agents";
 import { Header } from "./components/Header";
 import { SideMenu } from "./components/SideMenu";
 import { ReactQueryProvider } from "@/react-query-provider";
+import { MenuContextProvider } from "../context/menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,15 +33,19 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ReactQueryProvider>
-          <AgentsContextProvider>
-            <div className="grid grid-cols-1 md:grid-cols-4 min-h-screen">
-              <SideMenu />
-              <div className="md:col-span-3 flex flex-col">
-                <Header />
-                {children}
+          <MenuContextProvider>
+            <AgentsContextProvider>
+              <div className="grid md:grid-cols-custom grid-cols-1 min-h-screen">
+                <SideMenu />
+                <div className="flex flex-col sm:w-full">
+                  <Header />
+                  <main className="flex-1 p-6 bg-gray-100">
+                    {children}
+                  </main>
+                </div>
               </div>
-            </div>
-          </AgentsContextProvider>
+            </AgentsContextProvider>
+          </MenuContextProvider>
         </ReactQueryProvider>
       </body>
     </html>
