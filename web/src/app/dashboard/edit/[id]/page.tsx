@@ -46,14 +46,14 @@ const EditAgentPage = ({
     <div className="flex-1 bg-gray-500 py-4">
       <div className="flex justify-between items-center">
         <button
-          className="bg-blue-500 text-white ml-4 mt-4 px-4 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300"
+          className="bg-blue-500 text-white ml-4 px-4 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300"
           onClick={handleGoBack}
         >
           Back
         </button>
-        <h2 className="text-2xl ml-4 mt-4">Edit Agent</h2>
+        <h2 className="text-2xl ml-4">Edit Agent</h2>
         <button
-          className="bg-red-500 text-white mr-4 mt-4 px-4 py-2 rounded-full hover:bg-red-700 transition-colors duration-300"
+          className="bg-red-500 text-white mr-4 px-4 py-2 rounded-full hover:bg-red-700 transition-colors duration-300"
           onClick={() => handleDelete(agentId)}
         >
           Delete

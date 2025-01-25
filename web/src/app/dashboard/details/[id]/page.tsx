@@ -35,7 +35,7 @@ const DetailsAgentPage = ({
   }
 
   return agent && (
-    <div className="flex-1 bg-gray-500">
+    <div className="flex-1 bg-gray-500 p-4">
       <div className="relative my-4">
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300 absolute top-0 left-0 ml-4"

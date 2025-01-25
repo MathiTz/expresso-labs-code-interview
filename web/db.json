@@ -249,31 +249,6 @@
       },
       "status": "Inactive",
       "lastSeen": "2023-01-10T09:33:21Z"
-    },
-    {
-      "id": "t193nwumj",
-      "name": "Agent 2",
-      "email": "agent_test+2@agency.com",
-      "status": "Active",
-      "lastSeen": "19/01/2025",
-      "username": "Drew",
-      "address": {
-        "street": "Dale Street",
-        "suite": "Apt. 104",
-        "city": "East Tyrell",
-        "zipcode": "86821",
-        "geo": {
-          "lat": "-13.6176",
-          "lng": "82.0934"
-        }
-      },
-      "phone": "418-525-2395",
-      "website": "test@test.com",
-      "company": {
-        "name": "Ryan - Torp",
-        "catchPhrase": "Programmable global firmware",
-        "bs": "engineer virtual users"
-      }
     }
   ]
 }
