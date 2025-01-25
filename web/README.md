@@ -1,5 +1,13 @@
 # Expresso Labs Code Interview
 
+## Tests
+
+To run the tests, use the following command:
+
+```bash
+npm run test
+```
+
 ## How to Run the Code
 
 1. **Clone the repository:**
@@ -16,19 +24,25 @@ cd web
 npm install
 ```
 
-3. **Start the development server:**
+3. **Generate build for the application:**
+
+```bash
+npm run build
+```
+
+4. **Start the development server:**
 
 ```bash
 npm start
 ```
 
-4. **Run the JSON server:**
+5. **Run the JSON server:**
 
 ```bash
 npm run db
 ```
 
-5. **Open your browser and navigate to:**
+6. **Open your browser and navigate to:**
 
 ```
 http://localhost:3000
@@ -42,18 +56,26 @@ http://localhost:3000
   /dashboard
   ```
 
-  Displays a list of users.
+  Displays a list of agents.
 
-- **Create User:**
+- **Create Agent:**
 
   ```
   /dashboard/create
   ```
 
-  Creates a new user.
+  Creates a new agent.
 
-- **Edit or Delete User:**
+- **Edit or Delete Agent:**
+
   ```
   /dashboard/edit/{id}
   ```
-  Edits or deletes an existing user by ID.
+
+  Edits or deletes an existing agent by ID.
+
+- **Details of Agent:**
+  ```
+  /dashboard/details/{id}
+  ```
+  Edits or deletes an existing agent by ID.
