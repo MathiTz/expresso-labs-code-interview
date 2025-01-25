@@ -1,5 +1,13 @@
 # Expresso Labs Code Interview
 
+## Explanatory video
+
+
+
+https://github.com/user-attachments/assets/6d925474-7549-4170-b50c-93f872fabb87
+
+
+
 ## Tests
 
 To run the tests, use the following command:
